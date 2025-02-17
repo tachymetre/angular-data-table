@@ -1,0 +1,37 @@
+<div class="container">
+  <h2>Display Data Table</h2>
+  <label>Filter: </label>
+  <input
+    type="text"
+    placeholder="Search for people..."
+    [(ngModel)]="searchTerm"
+    (input)="filterUser()"
+  />
+
+  <label>Sort By: </label>
+  <select (change)="onSortChange($event)">
+    <option value="up">Ascending</option>
+    <option value="down">Descending</option>
+  </select>
+
+  <table border="1" *ngIf="filteredUserData.length">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Username</th>
+        <th>D.O.B./ID</th>
+        <th>Website</th>
+        <th>Phone Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of filteredUserData">
+        <td>{{user.name}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.id}}</td>
+        <td>{{user.website}}</td>
+        <td>{{user.phone}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
