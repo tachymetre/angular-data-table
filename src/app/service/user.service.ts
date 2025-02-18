@@ -3,11 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, map, of } from 'rxjs';
 
 export interface IUser {
-  id: number;
-  name: string;
-  username: string;
-  email: string;
-  website: string;
+  _id: string;
+  index: number;
+  title: string;
+  birthdate: string;
+  firstName: string;
+  lastName: string;
   phone: string;
 }
 
@@ -16,17 +17,11 @@ export interface IUser {
 })
 
 export class UserService {
-  baseURL: string = 'https://jsonplaceholder.typicode.com/';
-
   constructor(
     private http: HttpClient
   ) { }
 
-  getAllUsers(): Observable<any> {
-    return this.http.get<IUser[]>(`${this.baseURL}/users`)
-      .pipe(
-        catchError(err => of([])),
-        map((response) => response)
-      )
+  getAllUsers(): Observable<IUser[]> {
+    return this.http.get<IUser[]>('assets/mock-data/mock.json');
   }
 }

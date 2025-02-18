@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { UserService, IUser } from '../service/user.service';
-
 @Component({
   selector: 'app-display-table',
   standalone: true,
@@ -29,14 +28,17 @@ export class DisplayTableComponent implements OnInit {
   filterUser(): void {
     this.filteredUserData = this.userData.filter((item) => {
       const searchTerm = this.searchTerm.toLowerCase();
-      return item.name.toLowerCase().includes(searchTerm);
+      return item.firstName.toLowerCase().includes(searchTerm) || 
+        item.lastName.toLowerCase().includes(searchTerm) ||
+        item.title.toLowerCase().includes(searchTerm) ||
+        item.phone.toLowerCase().includes(searchTerm);
     })
   }
 
   onSortChange(event: any): void {
     const sortOption = event.target.value;
     this.filteredUserData.sort((a, b) => {
-      const comparison = a.name.localeCompare(b.name);
+      const comparison = a.firstName.localeCompare(b.firstName);
       return sortOption === 'up' ? comparison : -comparison;
     });
   }
