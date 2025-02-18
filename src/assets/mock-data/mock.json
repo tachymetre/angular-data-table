@@ -2,8 +2,8 @@
   {
     "_id": "67b3789c99d8b5216d751bc5",
     "index": 0,
-    "title": "quality assurance",
-    "birthdate": "01-29-2023",
+    "title": "director of engineering",
+    "birthdate": "01/29/2023",
     "firstName": "Wilkerson",
     "lastName": "Davenport",
     "phone": "+1 (955) 536-3557"
@@ -12,7 +12,7 @@
     "_id": "67b3789c994b66954323147c",
     "index": 1,
     "title": "scrum master",
-    "birthdate": "09-29-1960",
+    "birthdate": "09/29/1960",
     "firstName": "Vasquez",
     "lastName": "Hull",
     "phone": "+1 (935) 408-3642"
@@ -21,7 +21,7 @@
     "_id": "67b3789c2ad3f16bfe8a4b1d",
     "index": 2,
     "title": "data scientist",
-    "birthdate": "03-30-1989",
+    "birthdate": "03/30/1989",
     "firstName": "Elaine",
     "lastName": "Wade",
     "phone": "+1 (937) 453-3810"
@@ -30,7 +30,7 @@
     "_id": "67b3789c3749a401c4b142f2",
     "index": 3,
     "title": "quality assurance",
-    "birthdate": "10-28-1996",
+    "birthdate": "10/28/1996",
     "firstName": "Robbins",
     "lastName": "Chavez",
     "phone": "+1 (985) 451-2453"
@@ -39,7 +39,7 @@
     "_id": "67b3789c45404a2f026fe188",
     "index": 4,
     "title": "software engineer",
-    "birthdate": "03-31-1960",
+    "birthdate": "03/31/1960",
     "firstName": "Monroe",
     "lastName": "Valdez",
     "phone": "+1 (925) 568-3411"
@@ -47,8 +47,8 @@
   {
     "_id": "67b3789ca0986da405e45745",
     "index": 5,
-    "title": "quality assurance",
-    "birthdate": "11-17-2014",
+    "title": "project manager",
+    "birthdate": "11/17/2014",
     "firstName": "Reilly",
     "lastName": "Jarvis",
     "phone": "+1 (928) 419-3689"
@@ -57,7 +57,7 @@
     "_id": "67b3789c36cdf1e71ab43725",
     "index": 6,
     "title": "intern",
-    "birthdate": "09-19-1989",
+    "birthdate": "09/19/1989",
     "firstName": "Salinas",
     "lastName": "Atkins",
     "phone": "+1 (853) 416-3893"
@@ -65,8 +65,8 @@
   {
     "_id": "67b3789c01330f25642d95ce",
     "index": 7,
-    "title": "quality assurance",
-    "birthdate": "03-23-1978",
+    "title": "product advisor",
+    "birthdate": "03/23/1978",
     "firstName": "Jackie",
     "lastName": "Webb",
     "phone": "+1 (998) 437-2127"
@@ -75,7 +75,7 @@
     "_id": "67b3789cb7c84f049a85d7ee",
     "index": 8,
     "title": "database resource",
-    "birthdate": "05-03-1973",
+    "birthdate": "05/03/1973",
     "firstName": "Karen",
     "lastName": "Saunders",
     "phone": "+1 (942) 411-2332"
@@ -83,8 +83,8 @@
   {
     "_id": "67b3789c59d4526a2e153505",
     "index": 9,
-    "title": "quality assurance",
-    "birthdate": "11-25-1983",
+    "title": "business analyst",
+    "birthdate": "11/25/1983",
     "firstName": "Norma",
     "lastName": "Price",
     "phone": "+1 (994) 439-3864"
