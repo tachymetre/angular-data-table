@@ -10,8 +10,8 @@
 
   <label>Sort By: </label>
   <select (change)="onSortChange($event)">
-    <option value="up">Ascending</option>
-    <option value="down">Descending</option>
+    <option value="asc">Ascending</option>
+    <option value="desc">Descending</option>
   </select>
 
   <table border="1" *ngIf="filteredUserData.length">

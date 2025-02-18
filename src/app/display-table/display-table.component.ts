@@ -13,6 +13,7 @@ export class DisplayTableComponent implements OnInit {
   userData: IUser[] = [];
   filteredUserData: IUser[] = [];
   searchTerm: string = '';
+  sortOption: string = 'asc';
 
   constructor(
     private userService: UserService
@@ -22,24 +23,28 @@ export class DisplayTableComponent implements OnInit {
     this.userService.getAllUsers().subscribe((response: IUser[]) => {
       this.userData = response;
       this.filteredUserData = [...this.userData];
+      this.sortUser();
     })
   }
 
   filterUser(): void {
     this.filteredUserData = this.userData.filter((item) => {
       const searchTerm = this.searchTerm.toLowerCase();
-      return item.firstName.toLowerCase().includes(searchTerm) || 
-        item.lastName.toLowerCase().includes(searchTerm) ||
-        item.title.toLowerCase().includes(searchTerm) ||
-        item.phone.toLowerCase().includes(searchTerm);
+      return Object.values(item).some((value) => {
+        return String(value).toLowerCase().includes(searchTerm);
+      })
     })
   }
 
-  onSortChange(event: any): void {
-    const sortOption = event.target.value;
+  sortUser(): void {
     this.filteredUserData.sort((a, b) => {
       const comparison = a.firstName.localeCompare(b.firstName);
-      return sortOption === 'up' ? comparison : -comparison;
+      return this.sortOption === 'asc' ? comparison : -comparison;
     });
+  }
+
+  onSortChange(event: any): void {
+    this.sortOption = event.target.value;
+    this.sortUser();
   }
 }
